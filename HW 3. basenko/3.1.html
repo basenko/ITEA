@@ -1,0 +1,38 @@
+﻿<!--
+    Метод Join() - объединяет все элементы массива в одну строку. 
+    Если метод принимает строковой аргумент, то аргумент станет разделителем для элементов массива.
+-->
+
+<html>
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+
+    var cars = ["Subaru", "Volvo", "BMW", "Ford", "Skoda", "Lexus", "Honda", "Жигули"];
+        console.log("Исходный массив: " + cars);
+    var number = +prompt ("Вкажіть номер елементу масиву");
+        cars.splice(number, 0, "Toyota1", "Mazda1", "Akura1");
+        console.log("После вставки cars: ", cars);
+        console.log(cars.length)
+
+    var changedArray = cars.join(" / ");
+        console.log("После вставки changedArray: ", changedArray);
+
+       var newArray = changedArray.split(" / ");
+        console.log("После вставки changedArray: ", newArray);
+
+        var newCars = changedArray.concat(newArray);
+        console.log("После вставки newCars: ", newCars);
+        console.log(newCars.length)
+
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

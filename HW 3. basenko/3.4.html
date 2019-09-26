@@ -1,0 +1,42 @@
+﻿<!--
+    Метод Join() - объединяет все элементы массива в одну строку. 
+    Если метод принимает строковой аргумент, то аргумент станет разделителем для элементов массива.
+-->
+
+<html>
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+
+var array1 = ['команда Галера', 'Галера середньовічна', ' у морі'];
+var array2 = ['5 игроков', 'объем - повно вільних весел', '200 гребців'];
+var array3 = new Array();
+
+for (i =0; i<3; i++)
+        array3 [i] = (array1[i] + ": "+ array2[i]);
+
+        // console.log ('тест', array3);
+        var changedArray = array3.join("; ");      
+        console.log (changedArray);
+    
+    // console.log (array.length);
+    // for (i =0; i<number; i++)
+    // if (i %2 !=0) {
+    //     array[i] = (['odd', 'odd', 'odd'])
+    // } else {
+    //     array[i] = (['even', 'even', 'even']);
+    // };
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>
