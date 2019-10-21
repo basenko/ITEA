@@ -31,53 +31,53 @@
      <head>
       <title></title>
 
-      <script>
-        var a = +prompt("Введите первое число: ");
-        var c = prompt("Введите знак арифметической операции: + - * /");
-        var b = +prompt("Введите второе число: ");
-
-        if (c == "-" || c == "+" || c == "*" || c == "/"){
-			if ( isNaN(a) || isNaN(b)) {
-				alert ("таке не порахуєш");
-			} 
-		}
-		else alert ("таке не порахуєш");
-      var Calculator = new Object();
-      Calculator.a = a;
-      Calculator.b = b;
-      Calculator.add = function () {
-            return a + b;
+      <script type="text/javascript">
+        // Создаем пустой массив
+        var array = [];
+        // Создаем глобальную переменную n для ответа пользователя
+        var n;
+        // Функция которая будет спрашивать пользователя хочет ли он добавить сотрудника
+        function ask() {
+            n = confirm("Добавить сотрудника?");
+        };
+        // Создаем метод fill, который будет заполнять обьект данными, которые получаем от пользователя
+        function fill() {
+            obj.name = prompt("Введите имя сотрудника: ");
+            obj.sName = prompt("Введите фамилию сотрудника: ");
+            obj.age = prompt("Введите возраст сотрудника: ");
+            obj.occupation = prompt("Введите должность сотрудника: ");
+        };
+        // Вызиваем функцию ask
+        ask();
+        while (n == true) {
+            // Создаем цикл, который будет принимать информацию от пользователя и выводить ее на экран
+            for (var i = 0; i < 1; i++) {
+                // Создаем обьект
+                var obj = {
+                    name: " ",
+                    sName: " ",
+                    age: " ",
+                    occupation: " ",
+                    // Создаем метод show, который выведет нам информацию на экран
+                    show: function () {
+                        document.write("Имя: " + obj.name + "<br> Фамилия: " + obj.sName + "<br> Возраст: " + obj.age + "<br> Позиция: " + obj.occupation + "<br><br>");
+                    }
+                }
+                // Вызываем метод fill
+                fill();
+                // Отправляем обьект в массив
+                array.push(obj);
+                // Вызиваем метод show
+                array[i].show();
+            }
+            // Вызиваем функцию ask 
+            ask();
         }
-
-      Calculator.sub = function () { 
-            return a - b;
+        // Console log
+        for (var i = 0; i < array.length; i++) {
+            console.log(array[i]);
         }
-
-      Calculator.mul = function () {
-            return a * b;
-        }
-
-      Calculator.div = function () { 
-            return a / b;
-        }
-
-        switch (c) {
-            case "+":
-            document.write ( Calculator.add());
-                break;
-            case "-":
-            document.write ( Calculator.sub());
-                break;
-            case "*":
-            document.write ( Calculator.mul());
-                break;
-            case "/":
-            document.write ( Calculator.div());
-                break;
-            
-        }
-
-           </script>
+    </script>
 
     </head>
     <body>
