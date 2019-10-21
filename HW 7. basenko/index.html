@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 5</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700i&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>   
+	<script src="https://kit.fontawesome.com/f20231ab05.js"></script>
+
+</head>
+<body>
+	<header>
+		<div class="top-header wrapper" id="top">
+			<div class="phone-call">
+				<i class="fas fa-phone-alt"></i>
+				<span class="phone-number">Call +001 555 801</span>
+			</div>
+			<ul class="top-header-menu">
+				<li><a href="#">Welcome msg!</a></li>
+				<li class="separator"><a href="#">|</a></li>
+				<li><a href="#">My account</a></li>
+				<li class="separator"><a href="#">|</a></li>
+				<li><a href="#">My wishlist</a></li>
+				<li class="separator"><a href="#">|</a></li>
+				<li><button class="open-button" onclick="openForm()">Login</button></li>
+				</ul>
+			</div>
+			<div id="admin-form-block">
+				Authorization:<br>
+				<form id="admin-form" method="post">
+					<div class="admin-form-inside">
+						<input type="edit" name="login" class="admin-edit"><br>
+						<input type="password" name="password" class="admin-edit">
+					</div>
+				</form>
+				<div class="button botoom-right-button" onClick="closeForm()">Cancel</div>
+				<div class="button botoom-left-button"  onClick="closeForm()">Logon</div>
+			</div>
+
+			<script>
+				function openForm() {
+				document.getElementById("admin-form-block").style.display = "block";
+				}
+				function closeForm() {
+				document.getElementById("admin-form-block").style.display = "none";
+				}
+			</script> 
+
+	</header>
+	<div class="wrapper">
+		<div class="top-menu">
+			<ul class="menu-list">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Gallery</a></li>
+				<li><a href="#">Categories</a></li>
+				<li><a href="#">Pages</a></li>
+			</ul>
+			<a href="#" class="logo-big">Shophia</a>
+			<div class="socials-language">
+				<div class="socials">
+					<a href="#"><i class="fab fa-facebook-f"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-pinterest"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+				</div>
+				<div class="language-container">
+					<div class="active-language">
+						<a href="#">English</a><i class="fas fa-chevron-down"></i>
+					</div>
+					<div class="submenu">
+						<div class="extra-language">
+							<a href="#">Spanish</a>
+						</div>
+						<div class="extra-language">
+							<a href="#">French</a>
+						</div>
+						<div class="extra-language">
+							<a href="#">Italian</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+					<div class="slider">
+							<div>
+								<img src="./img/slider.png" alt="">
+							</div>
+							<div>
+								<img src="./img/slider2.jpg" alt="">
+							</div>
+							<div>
+								<img src="./img/slider3.jpg" alt="">
+							</div>
+						  </div>
+
+					<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+					<script type="text/javascript" src="slick.min.js"></script>
+					<script>
+						$(document).ready(function(){
+							$('.slider').slick({
+								arrows: true,
+								dots: true,
+								initialSlide: 1,
+								speed: 4000
+							});
+							$('.autoplay').slick({
+							slidesToShow: 3,
+							slidesToScroll: 1,
+							autoplay: true,
+							autoplaySpeed: 2000,
+							});
+						});
+					  </script>
+
+
+			<!-- Непотрібний кусок кода <div class="banner">
+				<p class="first-line">MID-SEASON</p>
+				<p class="second-line">SALE</p>
+				<div class="third-line">
+					<div class="left-lanes">
+						<div class="top-lane">
+						</div>
+						<div class="bottom-lane">
+						</div>
+					</div>
+					<p>UP TO</p>
+					<div class="right-lanes">
+						<div class="top-lane">
+						</div>
+						<div class="bottom-lane">
+						</div>
+					</div>
+				</div>
+				<p class="fourth-line">50<span> %</span> OFF</p>
+			</div>
+			<div class="shop-now">
+				<a href="#">SHOP NOW</a>
+			</div>
+			<div class="diamonds">
+				<a class="diamond" href=""></a>
+				<a class="diamond active" href=""></a>
+				<a class="diamond" href=""></a>
+			</div>
+		</div> -->
+		<div class="features-container">
+			<div class="features">
+				<div class="left-feature">
+					<div class="icon"><i class="fas fa-plane"></i></div>
+					<div class="text">
+						<p class="first-line">FREE SHIPPING</p>
+						<p class="second-line">In Order Min $200</p>
+					</div>
+				</div>
+				<div class="left-feature-arrow"></div>
+				<div class="mid-feature-arrow-left">
+					<div class="top-arrow"></div>
+					<div class="bottom-arrow"></div>
+				</div>
+				<div class="mid-feature">
+					<div class="icon"><i class="far fa-clock"></i></div>
+					<div class="text">
+						<p class="first-line">30-DAYS RETURNS</p>
+						<p class="second-line">Money Back Guarantee</p>
+					</div>
+				</div>
+				<div class="mid-feature-arrow-right">
+					<div class="top-arrow"></div>
+					<div class="bottom-arrow"></div>
+				</div>
+				<div class="right-feature-arrow"></div>
+				<div class="right-feature">
+					<div class="icon"><i class="far fa-life-ring"></i></div>
+					<div class="text">
+						<p class="first-line">24/7 SUPPORT</p>
+						<p class="second-line">Lifetime Support</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="collection-title-container">
+			<div class="left-horizontal-lane"></div>
+			<div class="diamond"></div>
+			<p class="collection-title">Summer Collection</p>
+			<div class="diamond"></div>
+			<div class="right-horizontal-lane"></div>
+		</div>
+		<div class="products-grid-container">
+			<div class="products-grid">
+				<div class="product product-1">
+					<div class="product-banner">
+						<div class="sale-value">20</div>
+						<div class="percent">%</div>
+					</div>
+					<div class="heart">
+						<a href="#"><img src="./img/heart.png" alt=""></a>
+					</div>
+					<div class="add-to-cart">
+						<a href="#">+ ADD TO CART</a>
+					</div>
+				</div>
+				<div class="product product-2">
+					<div class="product-banner"></div>
+					<div class="heart">
+						<a href="#"><img src="./img/heart.png" alt=""></a>
+					</div>
+					<div class="add-to-cart">
+						<a href="#">+ ADD TO CART</a>
+					</div>
+				</div>
+				<div class="product product-3">
+					<div class="product-banner"></div>
+					<div class="heart">
+						<a href="#"><img src="./img/heart.png" alt=""></a>
+					</div>
+					<div class="add-to-cart">
+						<a href="#">+ ADD TO CART</a>
+					</div>
+				</div>
+				<div class="product product-4">
+					<div class="product-banner">
+						<div class="sale-value">40</div>
+						<div class="percent">%</div>
+					</div>
+					<div class="heart">
+						<a href="#"><img src="./img/heart.png" alt=""></a>
+					</div>
+					<div class="add-to-cart">
+						<a href="#">+ ADD TO CART</a>
+					</div>
+				</div>
+				<div class="product product-5">
+					<div class="product-banner">
+						<div class="sale-value">20</div>
+						<div class="percent">%</div>
+					</div>
+					<div class="heart">
+						<a href="#"><img src="./img/heart.png" alt=""></a>
+					</div>
+					<div class="add-to-cart">
+						<a href="#">+ ADD TO CART</a>
+					</div>
+				</div>
+				<div class="product product-6">
+					<div class="product-banner"></div>
+					<div class="heart">
+						<a href="#"><img src="./img/heart.png" alt=""></a>
+					</div>
+					<div class="add-to-cart">
+						<a href="#">+ ADD TO CART</a>
+					</div>
+				</div>
+				<div class="product product-7">
+					<div class="product-banner"></div>
+					<div class="heart">
+						<a href="#"><img src="./img/heart.png" alt=""></a>
+					</div>
+					<div class="add-to-cart">
+						<a href="#">+ ADD TO CART</a>
+					</div>
+				</div>
+				<div class="product product-8">
+					<div class="product-banner">
+						<div class="sale-value">40</div>
+						<div class="percent">%</div>
+					</div>
+					<div class="heart">
+						<a href="#"><img src="./img/heart.png" alt=""></a>
+					</div>
+					<div class="add-to-cart">
+						<a href="#">+ ADD TO CART</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-container wrapper">
+			<div class="footer-menu">
+				<div class="column">
+					<p class="title">SHOPS</p>
+					<ul>
+						<li><a href="#">New In</a></li>
+						<li><a href="#">Women</a></li>
+						<li><a href="#">Men</a></li>
+						<li><a href="#">Shoes</a></li>
+						<li><a href="#">Bags & Accessories</a></li>
+						<li><a href="#">Top Brands</a></li>
+						<li><a href="#">Sale & Special Offers</a></li>
+						<li><a href="#">Lookbook</a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<p class="title">INFORMATION</p>
+					<ul>
+						<li><a href="#">About us</a></li>
+						<li><a href="#">Customer Service</a></li>
+						<li><a href="#">New Collection</a></li>
+						<li><a href="#">Best Sellers</a></li>
+						<li><a href="#">Manufactures</a></li>
+						<li><a href="#">Privacy policy</a></li>
+						<li><a href="#">Terms & condition</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<p class="title">CUSTOMER SERVICE</p>
+					<ul>
+						<li><a href="#">Search Terms</a></li>
+						<li><a href="#">Advanced Search</a></li>
+						<li><a href="#">Orders and Returns</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">RSS</a></li>
+						<li><a href="#">Help & FAQs</a></li>
+						<li><a href="#">Consultant</a></li>
+						<li><a href="#">Store Locations</a></li>
+					</ul>
+				</div>
+				<div class="column">
+					<p class="title">STAY CONNECTED</p>
+					<div class="socials">
+						<a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+						<a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+						<a href="#" class="pinterest"><i class="fab fa-pinterest"></i></a>
+						<a href="#" class="rss"><i class="fas fa-rss"></i></a>
+					</div>
+					<p class="subscribe title">SUBSCRIBE<span> in</span> OUR NEWS LETTER</p>
+					<form>
+						<div class="subscription">
+								<input type="email" name="email" id="email" placeholder="Enter Your Email Address">
+								<input type="submit" value="SUBSCRIBE" name="subscribe" id="subscribe">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="copyright">
+				<p class="copyright-text">
+					© 2015  Shopia  Fashion Store Shopify.
+					<br>
+					All Rights Reserved. Ecommerce Software by Shopify.
+					<br>
+					Designed by  MoccaLabs.com
+				</p>
+				<div class="button-to-top">
+					<button onclick="topFunction()" id="button-to-top" title="Go to top">Top</button>
+				</div>
+			</div>
+			<div class="pay-systems">
+				<div class="pay-system"><img src="./img/visa.png" alt=""></div>
+				<div class="pay-system"><img src="./img/mastercard.png" alt=""></div>
+				<div class="pay-system"><img src="./img/american-express.png" alt=""></div>
+				<div class="pay-system"><img src="./img/discover.png" alt=""></div>
+			</div>
+		</div>
+	</footer>
+	<script>
+	 
+
+		var mybutton = document.getElementById("button-to-top");
+		
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+		  if ( document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+		
+		function topFunction() {
+
+		  document.documentElement.scrollTop = 0;
+		}
+		</script> 
+</html>
